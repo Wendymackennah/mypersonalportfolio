@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/34f80d43a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <img src="/images/Logo.jpeg" class="logo">
+                <ul>
+                     <li><a href="#">Home</a></li>          
+                    <li><a href="#">About</a></li>         
+                    <li><a href="#">Services</a></li> 
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full stack Developer</p>
+                <h1>Hi,I am <span>Weddy </span><br>Makena</h1>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/me.jpg">
+                </div>                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> An accomplished software engineer specializing in web development. With expertise in languages such as HTML,CSS,Javascript,Flask and flutter frameworks.I excel in crafting high-performance, user-friendly websites. Known for clean and efficient code, I am dedicated to turning ideas into reality and staying ahead of industry trends.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills </p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">                   
+                      <ul>
+                        <li><span>UI/UX</span><br>Designing Website application Interfaces</li>
+                        <li><span>Web development</span><br>Designing Website application Interfaces</li>
+                        <li><span>App development</span><br>Building Website applications</li>
+                      </ul>
+                 </div>
+                 <div class="tab-contents" id="experience">                   
+                    <ul>
+                      <li><span>2022-current</span><br>Spotify</li>
+                      <li><span>2020-2022</span><br>Apple</li>
+                      <li><span>2019-2023</span><br>uber</li>
+                    </ul>
+               </div>                    
+                <div class="tab-contents" id="education">                   
+                <ul>
+                  <li><span>2017-2022</span><br>Havard University</li>
+                  <li><span>2016-2017</span><br>Shangtao College of Design  </li>
+                  <li><span>2015-2016</span><br>Bidii Technical Institute </li>
+                </ul>
+           </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam ullam mollitia, quidem quas ratione repellat! Asperiores praesentium dolor tenetur sequi sint. Vero deleniti ad id accusamus fugiat animi labore?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam ullam mollitia, quidem quas ratione repellat! Asperiores praesentium dolor tenetur sequi sint. Vero deleniti ad id accusamus fugiat animi labore?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam ullam mollitia, quidem quas ratione repellat! Asperiores praesentium dolor tenetur sequi sint. Vero deleniti ad id accusamus fugiat animi labore?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--Portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="images/Work-1.jpeg">
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                </div>
+                <div class="work">
+                    <img src="images/Work-3.jpeg">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");       
+        var tabcontents=document.getElementsByClassName("tab-contents");
+         
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){ 
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+    
+</body>
+</html>
